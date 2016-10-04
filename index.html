@@ -15,42 +15,43 @@
     <!-- start nav -->
 
     <nav class="navbar navbar-default">
-  <div class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">
-        <img class="logo" src="./img/star_wars_logo.png">
-      </a>
-    </div>
-    <div class="nav navbar-nav navbar-right">
-      <h3>Angular V - Routing With UI-Router</h3>
-    </div>
-  </div><!-- /.container-fluid -->
-</nav>
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">
+                    <img class="logo" src="./img/star_wars_logo.png">
+                </a>
+            </div>
+            <div class="nav navbar-nav navbar-right">
+                <h3>Angular V - Routing With UI-Router</h3>
+            </div>
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
     <!-- end nav -->
 
     <!-- start main -->
     <main class="wrapper">
         <div class="container">
             <div class="row">
-              <div class="col-lg-10 col-md-8">
-                <div class="characters" id="top">
-                    <ul class="character-list">
-                        <li ng-repeat="person in people">
-                            <div class="character">
-                                <h3>Name: {{ person.name }}</h3>
-                                <p>Gender: {{ person.gender }}</p>
-                                <p>Hair Color:{{ person.hair_color }}</p>
-                                <p>Eye Color: {{ person.eye_color }}</p>
-                                <button class="btn btn-primary" ng-click="getStarships( person.starships )">
-                                    Get {{ person.starships.length }} starships.
-                                </button>
-                            </div>
-                            <hr />
-                        </li>
-                        <button ng-click="getNextPage()" class="btn btn-success pull-right">Next Page</button>
-                    </ul>
-                  </div>
+                <div class="col-lg-10 col-md-8">
+                    <div class="characters" id="top">
+                        <ul class="character-list">
+                            <li ng-repeat="person in people">
+                                <div class="character">
+                                    <h3>Name: {{ person.name }}</h3>
+                                    <p>Gender: {{ person.gender }}</p>
+                                    <p>Hair Color:{{ person.hair_color }}</p>
+                                    <p>Eye Color: {{ person.eye_color }}</p>
+                                    <button class="btn btn-primary" ng-click="getStarships( person.starships )">
+                                        Get {{ person.starships.length }} starships.
+                                    </button>
+                                </div>
+                                <hr />
+                            </li>
+                            <button ng-click="getNextPage()" class="btn btn-success pull-right">Next Page</button>
+                        </ul>
+                    </div>
                 </div>
             </div>
             <div class="row">
