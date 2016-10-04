@@ -2,7 +2,7 @@
 ### UI-Router changes your application views based on state of the application and not just the route URL.
 
 ### Student will have produced:
-* An example with 3 routes that each resolve their own data
+* An example with 2 routes that each resolve their own data
 * Resolve dependency injections from a server
 
 ### Learning Objectives

@@ -1,0 +1,36 @@
+<!-- start main -->
+<main class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-8">
+                <div class="character">
+                    <div class="page-header">
+                        <h1>Character Info <small>{{ character.name }}</small></h1>
+                    </div>
+                    <ul class="list-group">
+                        <li class="list-group-item"><b>Gender:</b> {{ character.gender }}</li>
+                        <li class="list-group-item"><b>Hair Color:</b> {{ character.hair_color }}</li>
+                        <li class="list-group-item"><b>Eye Color:</b> {{ character.eye_color }}</li>
+                        <li class="list-group-item"><b>Skin Color:</b> {{character.skin_color}}</li>
+                        <li class="list-group-item"><b>Birth Year:</b> {{character.birth_year}}</li>
+                        <li class="list-group-item">Homeworld:</b> {{character.homeworld.name}}</li>
+                        <a ng-click="getStarships( character.starships )" style="cursor:pointer">
+                            <li class="list-group-item">
+                                <span class="badge">{{ character.starships.length }}</span> Ships
+                            </li>
+                        </a>
+                        <li class="list-group-item" ng-repeat="ship in starships">
+                            <div class="ship alert alert-info" role="alert">
+                                <h3>Name: {{ ship.name }}</h3>
+                                <h4>Manufacturer: {{ ship.manufacturer }}</h4>
+                                <p>Cost: {{ ship.cost_in_credits }}</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="btn btn-info" ui-sref="home">Back</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<!-- end main -->

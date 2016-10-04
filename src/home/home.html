@@ -1,0 +1,30 @@
+<!-- start main -->
+<main class="wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-10 col-md-8">
+                <div ng-repeat="char in characters" style="cursor:pointer">
+                    <a ui-sref="character({characterId: char.id})">{{char.name}} ({{char.gender}})</a>
+                </div>
+                <div class="characters" id="top">
+                    <ul class="character-list">
+                        <li ng-repeat="person in people">
+                            <div class="character">
+                                <h3>
+                                  Name:
+                                  <a ui-sref="character({characterId: person.id})">
+                                    {{ person.name }}
+                                  </a>
+                                </h3>
+                            </div>
+                            <hr />
+                        </li>
+                        <button ng-click="getNextPage()" class="btn btn-success pull-right">Next Page</button>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</main>
+<!-- end main -->
