@@ -28,6 +28,12 @@ nav {
 	line-height: 150px;
 }
 
+nav h3 {
+	/*line-height: 150px;*/
+	margin-top: 45px;
+	margin-right: 25px;
+}
+
 /*---------------------------------*\
 	MAIN
 \*---------------------------------*/
