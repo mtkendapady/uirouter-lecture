@@ -1,0 +1,108 @@
+/* Table of Content
+====================================
+	DOCUMENT
+	NAV
+	MAIN
+	FOOTER
+
+/*---------------------------------*\
+	DOCUMENT
+\*---------------------------------*/
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+/*---------------------------------*\
+	NAV
+\*---------------------------------*/
+
+nav {
+	min-height: 125px !important;
+  padding-left: 35px;
+}
+
+.logo {
+	width: 150px;
+	margin-top: 10px;
+	line-height: 150px;
+}
+
+/*---------------------------------*\
+	MAIN
+\*---------------------------------*/
+
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	height: 80%;
+	width: 100%;
+  margin-top: 50px;
+  margin-bottom: 150px;
+}
+
+.top-margin {
+  margin-top: 5px;
+}
+
+.characters {
+	flex: 1;
+	height: 100%;
+	overflow-y: scroll;
+}
+
+.starships {
+	flex: 1;
+}
+
+.character-list {
+	list-style-type: none;
+	margin-bottom: 150px;
+	padding: 0;
+}
+
+/*---------------------------------*\
+	FOOTER
+\*---------------------------------*/
+
+footer .container {
+	margin-right: 2% !important;
+}
+
+footer .navbar-text {
+  font-size: 2rem;
+  color: #fff !important;
+  line-height: 2em;
+	text-align: right;
+}
+
+footer a {
+  color: #fff;
+}
+
+footer a:hover {
+  color: red;
+  text-decoration: none;
+}
+
+footer container {
+	padding-right: 0 !important;
+	margint-right: 0 !important;
+}
+
+.fa-code {
+  color: #2AABE2;
+}
+
+.fa-heart {
+  color: red;
+}
+
+.fa-glide-g {
+  color: #000;
+}
+
+.footer-logo img {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+}
