@@ -19,3 +19,6 @@
 * more robust, complex applications
 * views and routes aren't tied down to the site URL
 * even if the URL doesn't change the parts of your site will re-route to the new view
+* using routing you can still use the backspace button. angular keeps track of the clicks the users is making
+
+https://cdnjs.com/libraries/angular-ui-router
