@@ -8,9 +8,33 @@ angular.module( "Starship" )
 					.get( baseUrl + "people" )
 					.then( function( people ) {
 						nextPageUrl = people.data.next;
-						return people;
+						for ( var i = 0; i < people.data.results.length; i++ ) {
+							var char = people.data.results[i];
+							var split = char.url.split( '/' );
+							var characterId = split[ split.length - 2 ];
+							console.log( characterId );
+							char.id = characterId;
+						}
+						return people.data.results;
 					} );
 	}
+
+	this.getCharacterData = function( characterId ) {
+		console.log( characterId);
+		var deferred = $q.defer();
+		var characterComplete;
+		$http({
+			method: "GET",
+			url: baseUrl + "people/" + characterId
+		}).then( function( result ) {
+			characterComplete = result.data;
+			deferred.resolve( characterComplete );
+		})
+
+		return deferred.promise;
+
+	}
+
 
 	this.getStarships = function( urlArray ) {
 		console.log( "top of getStarships in service" );

@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body ng-controller="homeCtrl">
+<body>
 
     <!-- start nav -->
 
@@ -30,53 +30,14 @@
     </nav>
     <!-- end nav -->
 
-    <!-- start main -->
-    <main class="wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-10 col-md-8">
-                    <div class="characters" id="top">
-                        <ul class="character-list">
-                            <li ng-repeat="person in people">
-                                <div class="character">
-                                    <h3>Name: {{ person.name }}</h3>
-                                    <p>Gender: {{ person.gender }}</p>
-                                    <p>Hair Color:{{ person.hair_color }}</p>
-                                    <p>Eye Color: {{ person.eye_color }}</p>
-                                    <button class="btn btn-primary" ng-click="getStarships( person.starships )">
-                                        Get {{ person.starships.length }} starships.
-                                    </button>
-                                </div>
-                                <hr />
-                            </li>
-                            <button ng-click="getNextPage()" class="btn btn-success pull-right">Next Page</button>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="starships">
-                    <ul class="ship-list">
-                        <li ng-repeat="ship in starships">
-                            <div class="ship">
-                                <h3>Name: {{ ship.name }}</h3>
-                                <h4>Manufacturer: {{ ship.manufacturer }}</h4>
-                                <p>Cost: {{ ship.cost_in_credits }}</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </main>
-    <!-- end main -->
+    <div ui-view></div>
 
     <!-- start footer -->
     <footer class="navbar navbar-inverse navbar-fixed-bottom">
         <div class="container">
             <div class="row">
                 <div class="navbar-text col-md-6 col-sm-6 pull-right">
-                    <i class="fa fa-code fa-lg"></i> with <i class="fa fa-heart fa-lg"></i> by <b><a href="https://github.com/McKmillions">Zach McKimmins</a></b>
+                    <i class="fa fa-code fa-lg"></i> with <i class="fa fa-heart fa-lg"></i> by <b><a href="https://github.com/mtkendapady">Matangi</a></b>
                 </div>
             </div>
         </div>
@@ -84,8 +45,10 @@
     <!-- end footer -->
 
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
     <script src="src/app.js"></script>
-    <script src="src/homeCtrl.js"></script>
+    <script src="src/home/homeCtrl.js"></script>
+    <script src="src/character/characterCtrl.js"></script>
     <script src="src/starshipService.js"></script>
 </body>
 
